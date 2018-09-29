@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#vowels1 {
+    display: grid;
+    grid-template-columns : repeat(4, minmax(30px, 1fr));
+    grid-gap: 5px;
+}
+#vowels1 div{
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgb(233, 202, 30);
+    background: green;
+    padding:10px;
+}
