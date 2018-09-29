@@ -2,19 +2,55 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background: lightblue;
+}
+#wrapper{
+    width: 90%;
+    background: white;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px gray;
+    padding: 0px 2px;
+    border-radius: 5px;
+}
+header h1{
+    color: saddlebrown;
+    padding-top: 10px;
+}
+nav {
+    background: gray;
+    margin: 20px 0px;
+}
+nav a {
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+nav a:hover{
+    background: white;
+    color: black;
+}
+nav a:active{
+    background: white;
+    color: black;
+}
 #vowels, #syllables {
     display: grid;
     grid-template-columns : repeat(4, minmax(30px, 1fr));
     grid-gap: 5px;
 }
 #vowels div, #syllables div{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
     color: rgb(250, 205, 3);
     background: green;
-    padding: 10px;
-    border-radius:5%;
+    padding: 5px;
+    border: 1px solid yellow;
+    border-radius:15%;
     box-shadow: 3px 3px 1px gray;
+    margin: 4px;
 }
 #syllables {
     display: grid;
@@ -22,5 +58,15 @@
     grid-gap: 5px;
 }
 button{
-    margin: 20px auto;
+    margin: 5px auto;
+    height: 30px;
+    padding: 5px;
+    background: rgb(6, 70, 70);
+    border: 1px solid rgb(184, 184, 36);
+    color: white;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 5px;
+}
+h2{
+    color: rgb(136, 61, 7);
 }
