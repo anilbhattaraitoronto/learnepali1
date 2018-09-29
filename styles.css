@@ -2,15 +2,25 @@
     margin: 0;
     padding: 0;
 }
-#vowels1 {
+#vowels, #syllables {
     display: grid;
     grid-template-columns : repeat(4, minmax(30px, 1fr));
     grid-gap: 5px;
 }
-#vowels1 div{
-    font-size: 1.2rem;
+#vowels div, #syllables div{
+    font-size: 1.4rem;
     text-align: center;
-    color: rgb(233, 202, 30);
+    color: rgb(250, 205, 3);
     background: green;
-    padding:10px;
+    padding: 10px;
+    border-radius:5%;
+    box-shadow: 3px 3px 1px gray;
+}
+#syllables {
+    display: grid;
+    grid-template-columns : repeat(5, minmax(30px, 1fr));
+    grid-gap: 5px;
+}
+button{
+    margin: 20px auto;
 }
