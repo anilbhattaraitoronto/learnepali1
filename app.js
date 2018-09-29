@@ -10,10 +10,13 @@ const syllableButton = document.querySelector('#syllable-button');
 
 const vowelSection = document.querySelector('#vowels');
 const syllableSection = document.querySelector('#syllables')
-const vowelList = document.querySelectorAll('#vowels div');
-const syllableList = document.querySelectorAll('#syllables div');
+const vowelList = document.querySelector('#vowels');
+const syllableList = document.querySelector('#syllables');
 
 vowelButton.addEventListener('click', function (event) {
+    while (syllableList.firstChild) {
+        syllableList.removeChild(syllableList.firstChild)
+    }
     j = 0;
     vowelSection.style.display = 'grid';
     syllableSection.style.display = 'none';
@@ -28,6 +31,9 @@ vowelButton.addEventListener('click', function (event) {
 });
 
 syllableButton.addEventListener('click', function (event) {
+    while (vowelList.firstChild) {
+        vowelList.removeChild(vowelList.firstChild);
+    }
     i = 0;
     syllableSection.style.display = "grid";
     vowelSection.style.display = 'none';
