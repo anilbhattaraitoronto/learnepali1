@@ -36,35 +36,43 @@ nav a:active{
     background: rgb(136, 82, 82);
     color: black;
 }
-#vowels, #syllables {
+#vowels {
     display: grid;
     grid-template-columns : repeat(4, minmax(30px, 1fr));
-    grid-gap: 4px;
+    grid-gap: 5px;
+    border: 2px solid rgb(16, 214, 165);
 }
 #vowels div:nth-child(odd), #syllables div:nth-child(odd){
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1px;
 }
 #vowels div:nth-child(even), #syllables div:nth-child(even){
+    display:grid;
+    grid-gap: 1px;
+    grid-template-columns: 1fr 1fr;
 }
 .varna-letters{
-    color: rgb(122, 19, 19);
+    color: rgb(10, 2, 90);
     padding: 3px 4px;
     border-right: .5px solid green; 
     font-size: 1.3rem;
-    /* text-align: center; */
-    background: yellow;
+    text-align: center;
+    background: rgb(16, 214, 165);
 }
 .romanized-letters {
-    color: rgb(22, 60, 71);
+    color: rgb(255, 255, 255);
     padding: 3px 4px;
     border-right: .5px solid blue;
     font-size: 1.3rem;
-    /* text-align: center; */
-    background: rgb(158, 149, 149);
+    text-align: center;
+    background: rgb(233, 27, 130);
 }
 #syllables {
     display: grid;
     grid-template-columns : repeat(5, minmax(30px, 1fr));
     grid-gap: 5px;
+    border: 2px solid rgb(16, 214, 165);
 }
 button{
     margin: 5px auto;
