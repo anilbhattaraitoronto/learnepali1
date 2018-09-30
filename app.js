@@ -26,10 +26,10 @@ vowelButton.addEventListener('click', function (event) {
     const newDiv = document.createElement('div');
     newDiv.classList.add('vowel-list');
     const varnaSpan = document.createElement('span');
-    varnaSpan.classList.add('varna-letters');
+    varnaSpan.classList.add('vowel-varna-letters');
     varnaSpan.textContent = vowels[i];
     const romanizedSpan = document.createElement('span');
-    romanizedSpan.classList.add('romanized-letters');
+    romanizedSpan.classList.add('vowel-romanized-letters');
     romanizedSpan.textContent = romanizedVowels[i];
     newDiv.appendChild(varnaSpan);
     newDiv.appendChild(romanizedSpan);
@@ -57,10 +57,10 @@ syllableButton.addEventListener('click', function (event) {
     const newDiv = document.createElement('div');
     newDiv.classList.add('syllable-list')
     const varnaSpan = document.createElement('span');
-    varnaSpan.classList.add('varna-letters');
+    varnaSpan.classList.add('syllable-varna-letters');
     varnaSpan.textContent = syllables[j];
     const romanizedSpan = document.createElement('span');
-    romanizedSpan.classList.add('romanized-letters');
+    romanizedSpan.classList.add('syllable-romanized-letters');
     romanizedSpan.textContent = romanizedSyllables[j];
     newDiv.appendChild(varnaSpan);
     newDiv.appendChild(romanizedSpan);
