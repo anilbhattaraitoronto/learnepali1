@@ -5,16 +5,90 @@ const romanizedVowels = ['a', 'aa', 'i', 'ee', 'u', 'oo', 'eh', 'eih', 'o', 'au'
 const syllables = ['क', 'ख', 'ग', 'घ', 'ङ', 'च', 'छ', 'ज', 'झ', 'ञ', 'ट', 'ठ', 'ड', 'ढ', 'ण', 'त', 'थ', 'द', 'ध', 'न', 'प', 'फ', 'ब', 'भ', 'म', 'य', 'र', 'ल', 'व', 'स', 'ष', 'श', 'ह', 'क्ष', 'त्र', 'ज्ञ'];
 const romanizedSyllables = ['ka', 'kha', 'ga', 'gha', 'nga', 'cha', 'chha', 'ja', 'jha', 'yan', 'ta', 'tha', 'da', 'dha', 'ana', 'ta', 'tha', 'da', 'dha', 'na', 'pa', 'pha', 'ba', 'bha', 'ma', 'ya', 'ra', 'la', 'wa', 'sa', 'sha', 'sha', 'ha', 'chya', 'tra', 'gyan'];
 
+//play buttons
+const startButton = document.querySelector('#start-button');
 const vowelButton = document.querySelector('#vowel-button');
 const syllableButton = document.querySelector('#syllable-button');
+
+//nav buttons 
+const homeButton = document.querySelector("#home-nav");
+const blogsButton = document.querySelector("#blogs-nav");
+const languageButton = document.querySelector("#language-nav");
+
+//sections to be targetted
+const startPlaying = document.querySelector('#start-playing');
 const learnVowels = document.querySelector('#learn-vowels');
 const learnSyllables = document.querySelector('#learn-syllables');
-
 const vowelSection = document.querySelector('#vowels');
 const syllableSection = document.querySelector('#syllables')
 const vowelList = document.querySelector('#vowels');
 const syllableList = document.querySelector('#syllables');
+const blogsList = document.querySelector('#blogs');
+const languageDescription = document.querySelector('#language');
 
+
+startButton.addEventListener('click', function (event) {
+    while (syllableList.firstChild) {
+        syllableList.removeChild(syllableList.firstChild)
+    };
+    while (vowelList.firstChild) {
+        vowelList.removeChild(vowelList.firstChild);
+    };
+    i = 0;
+    j = 0;
+    startPlaying.style.display = 'none';
+    learnVowels.style.display = 'block';
+    vowelList.style.display = 'grid';
+    blogsList.style.display = 'none';
+});
+
+homeButton.addEventListener('click', function (event) {
+    startPlaying.style.display = "block";
+    languageDescription.style.display = 'none';
+    blogsList.style.display = 'none';
+    learnVowels.style.display = 'none';
+    learnSyllables.style.display = 'none';
+    vowelSection.style.display = 'none';
+    syllableSection.style.display = 'none';
+    vowel.List.style.display = 'none';
+    syllableList.style.display = 'none';
+});
+
+blogsButton.addEventListener('click', function (event) {
+    while (syllableList.firstChild) {
+        syllableList.removeChild(syllableList.firstChild)
+    };
+    while (vowelList.firstChild) {
+        vowelList.removeChild(vowelList.firstChild);
+    };
+    languageDescription.style.display = 'none';
+    blogsList.style.display = 'block';
+    startPlaying.style.display = "none";
+    learnVowels.style.display = 'none';
+    learnSyllables.style.display = 'none';
+    vowelSection.style.display = 'none';
+    syllableSection.style.display = 'none';
+    vowelList.style.display = 'none';
+    syllableList.style.display = 'none';
+})
+
+languageButton.addEventListener('click', function (event) {
+    while (syllableList.firstChild) {
+        syllableList.removeChild(syllableList.firstChild)
+    };
+    while (vowelList.firstChild) {
+        vowelList.removeChild(vowelList.firstChild);
+    };
+    languageDescription.style.display = 'block';
+    blogsList.style.display = 'none';
+    startPlaying.style.display = "none";
+    learnVowels.style.display = 'none';
+    learnSyllables.style.display = 'none';
+    vowelSection.style.display = 'none';
+    syllableSection.style.display = 'none';
+    vowelList.style.display = 'none';
+    syllableList.style.display = 'none';
+});
 vowelButton.addEventListener('click', function (event) {
     while (syllableList.firstChild) {
         syllableList.removeChild(syllableList.firstChild)
@@ -43,7 +117,6 @@ vowelButton.addEventListener('click', function (event) {
         }
         learnSyllables.style.display = 'block';
         learnVowels.style.display = 'none';
-
     }
 });
 
@@ -64,7 +137,6 @@ syllableButton.addEventListener('click', function (event) {
     romanizedSpan.textContent = romanizedSyllables[j];
     newDiv.appendChild(varnaSpan);
     newDiv.appendChild(romanizedSpan);
-    // newDiv.textContent = syllables[j] + " " + romanizedSyllables[j];
     syllableSection.appendChild(newDiv);
     j++;
     if (j === 37) {

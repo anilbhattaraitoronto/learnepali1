@@ -112,3 +112,7 @@ button{
 h2{
     color: rgb(136, 61, 7);
 }
+
+#learn-vowels, #learn-syllables, #blogs, #language, #vowels, #syllables {
+    display: none;
+}
