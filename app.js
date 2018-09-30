@@ -3,7 +3,7 @@ var j = 0;
 const vowels = ['अ', 'आ', 'इ', 'ई', 'उ', 'ऊ', 'ए', 'ऐ', 'ओ', 'औ', 'अं', 'अ:'];
 const romanizedVowels = ['a', 'aa', 'i', 'ee', 'u', 'oo', 'eh', 'eih', 'o', 'au', 'ahm', 'aha'];
 const syllables = ['क', 'ख', 'ग', 'घ', 'ङ', 'च', 'छ', 'ज', 'झ', 'ञ', 'ट', 'ठ', 'ड', 'ढ', 'ण', 'त', 'थ', 'द', 'ध', 'न', 'प', 'फ', 'ब', 'भ', 'म', 'य', 'र', 'ल', 'व', 'स', 'ष', 'श', 'ह', 'क्ष', 'त्र', 'ज्ञ'];
-const romanizedSyllables = ['ka', 'kha', 'ga', 'gha', 'nga', 'cha', 'chha', 'ja', 'jha', 'yan', 'ta', 'tha', 'da', 'dha', 'ana', 'taa', 'thaa', 'daa', 'dhaa', 'na', 'pa', 'pha', 'ba', 'bha', 'ma', 'ya', 'ra', 'la', 'wa', 'sa', 'shaa', 'sha', 'ha', 'chya', 'tra', 'gyan'];
+const romanizedSyllables = ['ka', 'kha', 'ga', 'gha', 'nga', 'cha', 'chha', 'ja', 'jha', 'yan', 'ta', 'tha', 'da', 'dha', 'ana', 'ta', 'tha', 'da', 'dha', 'na', 'pa', 'pha', 'ba', 'bha', 'ma', 'ya', 'ra', 'la', 'wa', 'sa', 'sha', 'sha', 'ha', 'chya', 'tra', 'gyan'];
 
 const vowelButton = document.querySelector('#vowel-button');
 const syllableButton = document.querySelector('#syllable-button');
@@ -25,7 +25,15 @@ vowelButton.addEventListener('click', function (event) {
     syllableSection.style.display = 'none';
     const newDiv = document.createElement('div');
     newDiv.classList.add('vowel-list');
-    newDiv.textContent = vowels[i] + " " + romanizedVowels[i];
+    const varnaSpan = document.createElement('span');
+    varnaSpan.classList.add('varna-letters');
+    varnaSpan.textContent = vowels[i];
+    const romanizedSpan = document.createElement('span');
+    romanizedSpan.classList.add('romanized-letters');
+    romanizedSpan.textContent = romanizedVowels[i];
+    newDiv.appendChild(varnaSpan);
+    newDiv.appendChild(romanizedSpan);
+    // newDiv.textContent = vowels[i] + " " + romanizedVowels[i];
     vowelSection.appendChild(newDiv);
     i++;
     if (i == 13) {
@@ -48,7 +56,15 @@ syllableButton.addEventListener('click', function (event) {
     vowelSection.style.display = 'none';
     const newDiv = document.createElement('div');
     newDiv.classList.add('syllable-list')
-    newDiv.textContent = syllables[j] + " " + romanizedSyllables[j];
+    const varnaSpan = document.createElement('span');
+    varnaSpan.classList.add('varna-letters');
+    varnaSpan.textContent = syllables[j];
+    const romanizedSpan = document.createElement('span');
+    romanizedSpan.classList.add('romanized-letters');
+    romanizedSpan.textContent = romanizedSyllables[j];
+    newDiv.appendChild(varnaSpan);
+    newDiv.appendChild(romanizedSpan);
+    // newDiv.textContent = syllables[j] + " " + romanizedSyllables[j];
     syllableSection.appendChild(newDiv);
     j++;
     if (j === 37) {

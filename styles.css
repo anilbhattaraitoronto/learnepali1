@@ -6,12 +6,12 @@ body{
     background: lightblue;
 }
 #wrapper{
-    width: 90%;
+    width: 95%;
     background: white;
     margin: 0 auto;
-    box-shadow: 2px 2px 5px gray;
+    box-shadow: 1px 1px 5px gray;
     padding: 0px 2px;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 header h1{
     color: saddlebrown;
@@ -33,24 +33,33 @@ nav a:hover{
     color: black;
 }
 nav a:active{
-    background: white;
+    background: rgb(136, 82, 82);
     color: black;
 }
 #vowels, #syllables {
     display: grid;
     grid-template-columns : repeat(4, minmax(30px, 1fr));
-    grid-gap: 5px;
+    grid-gap: 4px;
 }
-#vowels div, #syllables div{
-    font-size: 1.2rem;
-    text-align: center;
-    color: rgb(250, 205, 3);
-    background: green;
-    padding: 5px;
-    border: 1px solid yellow;
-    border-radius:15%;
-    box-shadow: 3px 3px 1px gray;
-    margin: 4px;
+#vowels div:nth-child(odd), #syllables div:nth-child(odd){
+}
+#vowels div:nth-child(even), #syllables div:nth-child(even){
+}
+.varna-letters{
+    color: rgb(122, 19, 19);
+    padding: 3px 4px;
+    border-right: .5px solid green; 
+    font-size: 1.3rem;
+    /* text-align: center; */
+    background: yellow;
+}
+.romanized-letters {
+    color: rgb(22, 60, 71);
+    padding: 3px 4px;
+    border-right: .5px solid blue;
+    font-size: 1.3rem;
+    /* text-align: center; */
+    background: rgb(158, 149, 149);
 }
 #syllables {
     display: grid;
@@ -64,8 +73,8 @@ button{
     background: rgb(6, 70, 70);
     border: 1px solid rgb(184, 184, 36);
     color: white;
-    box-shadow: 2px 2px 2px gray;
-    border-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 8px;
 }
 h2{
     color: rgb(136, 61, 7);
