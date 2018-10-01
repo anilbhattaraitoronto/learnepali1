@@ -50,7 +50,7 @@ homeButton.addEventListener('click', function (event) {
     learnSyllables.style.display = 'none';
     vowelSection.style.display = 'none';
     syllableSection.style.display = 'none';
-    vowel.List.style.display = 'none';
+    vowelList.style.display = 'none';
     syllableList.style.display = 'none';
 });
 

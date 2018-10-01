@@ -23,13 +23,16 @@ body{
     padding: 0px 2px;
     border-radius: 2px;
 }
-header h1{
+p{
+    padding: 10px 0px 3px 10px;
+}
+header h1 {
     color: saddlebrown;
-    padding-top: 10px;
+    padding: 30px 10px;
 }
 nav {
     background: gray;
-    margin: 20px 0px;
+    padding: 0px 10px;
 }
 nav a {
     display: inline-block;
@@ -109,10 +112,31 @@ button{
     box-shadow: 2px 2px 5px gray;
     border-radius: 8px;
 }
-h2{
+h2, h3{
     color: rgb(136, 61, 7);
+    padding: 10px 10px 3px 10px;
 }
-
 #learn-vowels, #learn-syllables, #blogs, #language, #vowels, #syllables {
     display: none;
+}
+
+#language #vowel-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(30px, 1fr));
+    grid-gap: 8px;
+}
+#language #syllable-list{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(30px, 1fr));
+    grid-gap: 6px;
+}
+#language #vowel-list div, #language #syllable-list div{
+    background: green;
+    color: yellow;
+    text-align: center;
+    padding: 7px;
+}
+footer {
+    background: lightblue;
+    padding: 30px;
 }
