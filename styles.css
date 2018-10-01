@@ -5,7 +5,8 @@
 body{
     background: rgb(253, 255, 154);
 }
-@media only screen and (max-width:500px) {
+/* media query begins*/
+@media only screen and (min-width:480px) {
     body {
         width: 95%;
         background: rgb(209, 201, 175);
@@ -14,10 +15,12 @@ body{
         padding: 0px 2px;
         border-radius: 2px;
     }
-    #wrapper{
-        background: gray;
+    #language #vowel-list div, #language #vowel-list div, #language #syllable-list div, #language #syllable-list div{
+        font-size: 2rem;
     }
 }
+/* media query ends*/
+
 #wrapper{
     width: 95%;
     background: white;
@@ -134,23 +137,39 @@ h3{
 #language #vowel-list {
     display: grid;
     grid-template-columns: repeat(4, minmax(30px, 1fr));
-    grid-gap: 8px;
+    grid-gap: 5px;
     margin-left: 10px;
-    background: lightblue;
 }
 #language #syllable-list{
     display: grid;
     grid-template-columns: repeat(5, minmax(30px, 1fr));
-    grid-gap: 6px;
+    grid-gap: 4px;
     margin-left: 10px;
-    background: lightblue;
 }
 #language #vowel-list div, #language #syllable-list div{
-    background: green;
-    color: yellow;
-    text-align: center;
-    padding: 7px;
+    background: rgb(1, 71, 1);
+    padding: 6px 3px;
+    
 }
+#language #vowel-list div span:nth-child(odd){
+    color: rgb(247, 171, 171);
+    float: left;
+    /* font-size: 1.3rem; */
+}
+#language #vowel-list div span:nth-child(even){
+    color: white;
+    float: right;
+    /* font-size: 1.3rem; */
+}
+#language #syllable-list div span:nth-child(odd) {
+    color: rgb(238, 146, 146);
+    float: left;
+}
+#language #syllable-list div span:nth-child(even){
+    color: white;
+    float: right;
+}
+
 footer {
     background: lightblue;
     padding: 30px;
