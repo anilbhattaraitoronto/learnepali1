@@ -55,12 +55,12 @@ homeButton.addEventListener('click', function (event) {
 });
 
 blogsButton.addEventListener('click', function (event) {
-    while (syllableList.firstChild) {
-        syllableList.removeChild(syllableList.firstChild)
-    };
-    while (vowelList.firstChild) {
-        vowelList.removeChild(vowelList.firstChild);
-    };
+    // while (syllableList.firstChild) {
+    //     syllableList.removeChild(syllableList.firstChild)
+    // };
+    // while (vowelList.firstChild) {
+    //     vowelList.removeChild(vowelList.firstChild);
+    // };
     languageDescription.style.display = 'none';
     blogsList.style.display = 'block';
     startPlaying.style.display = "none";
@@ -73,12 +73,12 @@ blogsButton.addEventListener('click', function (event) {
 })
 
 languageButton.addEventListener('click', function (event) {
-    while (syllableList.firstChild) {
-        syllableList.removeChild(syllableList.firstChild)
-    };
-    while (vowelList.firstChild) {
-        vowelList.removeChild(vowelList.firstChild);
-    };
+    // while (syllableList.firstChild) {
+    //     syllableList.removeChild(syllableList.firstChild)
+    // };
+    // while (vowelList.firstChild) {
+    //     vowelList.removeChild(vowelList.firstChild);
+    // };
     languageDescription.style.display = 'block';
     blogsList.style.display = 'none';
     startPlaying.style.display = "none";
@@ -107,7 +107,6 @@ vowelButton.addEventListener('click', function (event) {
     romanizedSpan.textContent = romanizedVowels[i];
     newDiv.appendChild(varnaSpan);
     newDiv.appendChild(romanizedSpan);
-    // newDiv.textContent = vowels[i] + " " + romanizedVowels[i];
     vowelSection.appendChild(newDiv);
     i++;
     if (i == 13) {
@@ -147,8 +146,4 @@ syllableButton.addEventListener('click', function (event) {
         learnVowels.style.display = 'block';
         learnSyllables.style.display = 'none';
     }
-})
-
-
-
-
+});
