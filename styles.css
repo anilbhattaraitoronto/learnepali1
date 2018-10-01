@@ -5,16 +5,19 @@
 body{
     background: rgb(253, 255, 154);
 }
-/* @media only screen and (max-width:500px) {
-    #wrapper {
+@media only screen and (max-width:500px) {
+    body {
         width: 95%;
-        background: rgb(167, 98, 98);
+        background: rgb(209, 201, 175);
         margin: 0px auto;
         box-shadow: 1px 1px 5px gray;
         padding: 0px 2px;
         border-radius: 2px;
     }
-} */
+    #wrapper{
+        background: gray;
+    }
+}
 #wrapper{
     width: 95%;
     background: white;
@@ -27,24 +30,25 @@ p{
     padding: 10px 0px 3px 10px;
 }
 header h1 {
-    color: saddlebrown;
+    color: rgb(29, 92, 4);
     padding: 30px 10px;
 }
-nav {
-    background: gray;
-    padding: 0px 10px;
-    margin: 0px 10px;
+nav{
+    background: lightblue;
+    position: sticky;
+    top: 0;;
 }
-nav a {
+nav a{
     display: inline-block;
-    padding: 5px;
+    padding: 8px;
     text-decoration: none;
-    color: white;
-    text-align: center;
+    font-size: 1.1rem;
+    color: rgb(66, 24, 5);
+    font-weight: bold;
 }
 nav a:hover{
     background: white;
-    color: black;
+    color:darkgreen;
 }
 nav a:active{
     background: rgb(136, 82, 82);
@@ -104,8 +108,10 @@ nav a:active{
     border: 2px solid rgb(16, 214, 165);
 }
 button{
+    width: 150px;
+    height: 40px;
+    font-size: 1.2rem;
     margin: 5px auto;
-    height: 30px;
     padding: 5px;
     background: rgb(6, 70, 70);
     border: 1px solid rgb(184, 184, 36);
@@ -113,8 +119,12 @@ button{
     box-shadow: 2px 2px 5px gray;
     border-radius: 8px;
 }
-h2, h3{
+h2{
     color: rgb(136, 61, 7);
+    padding: 10px 10px 3px 10px;
+}
+h3{
+    color: rgb(9, 66, 112);
     padding: 10px 10px 3px 10px;
 }
 #learn-vowels, #learn-syllables, #blogs, #language, #vowels, #syllables {
@@ -125,11 +135,15 @@ h2, h3{
     display: grid;
     grid-template-columns: repeat(4, minmax(30px, 1fr));
     grid-gap: 8px;
+    margin-left: 10px;
+    background: lightblue;
 }
 #language #syllable-list{
     display: grid;
     grid-template-columns: repeat(5, minmax(30px, 1fr));
     grid-gap: 6px;
+    margin-left: 10px;
+    background: lightblue;
 }
 #language #vowel-list div, #language #syllable-list div{
     background: green;
