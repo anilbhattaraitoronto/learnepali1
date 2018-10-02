@@ -108,6 +108,10 @@ nav a:active{
     grid-gap: 8px;
     border: 2px solid rgb(16, 214, 165);
 }
+#learn-buttons{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
 button{
     width: 180px;
     height: 60px;
