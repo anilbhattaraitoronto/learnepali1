@@ -6,7 +6,7 @@ body{
     background: rgb(253, 255, 154);
 }
 /* media query begins*/
-@media only screen and (min-width:480px) {
+@media only screen and (min-width:560px) {
     body {
         width: 95%;
         background: rgb(209, 201, 175);
@@ -16,7 +16,13 @@ body{
         border-radius: 2px;
     }
     #language #vowel-list div, #language #vowel-list div, #language #syllable-list div, #language #syllable-list div{
-        font-size: 2rem;
+        font-size: 4vw;
+    }
+    #language span{
+        padding: 5px;
+    }
+    p{
+        font-size: 1.2rem;
     }
 }
 /* media query ends*/
@@ -168,6 +174,13 @@ h3{
 #language #syllable-list div span:nth-child(even){
     color: white;
     float: right;
+}
+caption{
+    background: gray;
+    float: right;
+}
+img{
+    width: 100%;
 }
 
 footer {
