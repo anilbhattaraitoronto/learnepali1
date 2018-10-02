@@ -2,36 +2,12 @@
     margin: 0;
     padding: 0;
 }
+
+
 body{
     background: rgb(253, 255, 154);
 }
-/* media query begins*/
-@media only screen and (min-width:560px) {
-    body {
-        width: 95%;
-        background: rgb(209, 201, 175);
-        margin: 0px auto;
-        box-shadow: 1px 1px 5px gray;
-        padding: 0px 2px;
-        border-radius: 2px;
-    }
-    #language #vowel-list div, #language #vowel-list div, #language #syllable-list div, #language #syllable-list div{
-        font-size: 4vw;
-    }
-    #language span{
-        padding: 5px;
-    }
-    h1{
-        font-size: 5vw;
-    }
-    p{
-        font-size: 2.5vw;
-    }
-    nav a{
-        font-size: 2.7vw;
-    }
-}
-/* media query ends*/
+
 
 #wrapper{
     width: 95%;
@@ -43,6 +19,7 @@ body{
 }
 p{
     padding: 10px 0px 3px 10px;
+    font-size: 3.8vw;
 }
 header h1 {
     color: rgb(29, 92, 4);
@@ -68,11 +45,21 @@ nav a:active{
     background: rgb(136, 82, 82);
     color: black;
 }
-#vowels {
+#vowels, #conjugated-syllables {
     display: grid;
     grid-template-columns : repeat(4, minmax(30px, 1fr));
     grid-gap: 8px;
     border: 2px solid rgb(16, 214, 165);
+}
+#conjugated-syllables div{
+    background: green;
+    padding: 10px;
+    text-align: center;
+    color: yellow;
+    font-size: 1.3rem; 
+}
+#conjugated-syllables div:nth-child((13n+1)){
+    background: white;
 }
 #vowels div:nth-child(odd), #syllables div:nth-child(odd){
     display:grid;
@@ -122,8 +109,8 @@ nav a:active{
     border: 2px solid rgb(16, 214, 165);
 }
 button{
-    width: 150px;
-    height: 40px;
+    width: 180px;
+    height: 60px;
     font-size: 1.2rem;
     margin: 5px auto;
     padding: 5px;
@@ -141,7 +128,7 @@ h3{
     color: rgb(9, 66, 112);
     padding: 10px 10px 3px 10px;
 }
-#learn-vowels, #learn-syllables, #blogs, #language, #vowels, #syllables {
+#lessons, #learn-vowels, #learn-syllables, #learn-conjugated, #blogs, #language, #vowels, #syllables {
     display: none;
 }
 
@@ -185,10 +172,48 @@ caption{
     float: right;
 }
 img{
-    width: 100%;
+    display: block;
+    width: 95%;
+    margin: 0 auto;
 }
 
 footer {
     background: lightblue;
     padding: 30px;
 }
+
+
+/* media query begins*/
+
+@media only screen and (min-width:420px) {
+    body {
+        width: 95%;
+        background: rgb(209, 201, 175);
+        margin: 0px auto;
+        box-shadow: 1px 1px 5px gray;
+        padding: 0px 2px;
+        border-radius: 2px;
+    }
+    #language #vowel-list div, #language #vowel-list div, #language #syllable-list div, #language #syllable-list div{
+        font-size: 4vw;
+    }
+    #language span{
+        padding: 5px;
+    }
+    h1{
+        font-size: 5vw;
+    }
+    h2{
+        font-size: 4vw;
+    }
+    h3{
+        font-size: 3.3vw;
+    }
+    p{
+        font-size: 2.8vw;
+    }
+    nav a{
+        font-size: 2.7vw;
+    }
+}
+/* media query ends*/

@@ -48,15 +48,7 @@ const conjugatedSyllables = [
     ['क्ष', 'क्षा', 'क्षि', 'क्षी', 'क्षु', 'क्षू', 'क्षे', 'क्षै', 'क्षो', 'क्षौ', 'क्षं', 'क्ष:'],
     ['त्र', 'त्रा', 'त्रि', 'त्री', 'त्रु', 'त्रू', 'त्रे', 'त्रै', 'त्रो', 'त्रौ', 'त्रं', 'त्र:'],
     ['ज्ञ', 'ज्ञा', 'ज्ञि', 'ज्ञी', 'ज्ञु', 'ज्ञू', 'ज्ञे', 'ज्ञै', 'ज्ञो', 'ज्ञौ', 'ज्ञं', 'ज्ञ:'],
-];
-//looping through nested array
-// for (i = 0; i < 36; i++) {
-//     for (j = 0; j < 12; j++) {
-
-//         console.log(conjugatedSyllables[i][j])
-//     }
-// }
-
+]
 //date/time
 
 const now = Date();
@@ -66,36 +58,50 @@ const datePara = document.querySelector('#date-time');
 const startButton = document.querySelector('#start-button');
 const vowelButton = document.querySelector('#vowel-button');
 const syllableButton = document.querySelector('#syllable-button');
+const conjugatedButton = document.querySelector('#conjugated-button');
 
 //nav buttons 
 const homeButton = document.querySelector("#home-nav");
+const lessonsButton = document.querySelector("#lessons-nav");
 const blogsButton = document.querySelector("#blogs-nav");
 const languageButton = document.querySelector("#language-nav");
 
 //sections to be targetted
 const startPlaying = document.querySelector('#start-playing');
+const lessons = document.querySelector('#lessons');
+const lessonList = document.querySelector('#lesson-list');
 const learnVowels = document.querySelector('#learn-vowels');
 const learnSyllables = document.querySelector('#learn-syllables');
+const learnConjugated = document.querySelector('#learn-conjugated');
 const vowelSection = document.querySelector('#vowels');
 const syllableSection = document.querySelector('#syllables')
+const conjugatedSyllableSection = document.querySelector('#conjugated-syllables');
 const vowelList = document.querySelector('#vowels');
 const syllableList = document.querySelector('#syllables');
 const blogsList = document.querySelector('#blogs');
 const languageDescription = document.querySelector('#language');
 
 
-startButton.addEventListener('click', function (event) {
+
+lessonsButton.addEventListener('click', function (event) {
     while (syllableList.firstChild) {
         syllableList.removeChild(syllableList.firstChild)
     };
     while (vowelList.firstChild) {
         vowelList.removeChild(vowelList.firstChild);
     };
+    while (conjugatedSyllableSection.firstChild) {
+        conjugatedSyllableSection.removeChild(conjugatedSyllableSection.firstChild);
+    };
     i = 0;
     j = 0;
     startPlaying.style.display = 'none';
     learnVowels.style.display = 'block';
-    vowelList.style.display = 'grid';
+    learnSyllables.style.display = 'block';
+    learnConjugated.style.display = 'block';
+    // vowelList.style.display = 'grid';
+    lessons.style.display = 'block';
+    languageDescription.style.display = 'none';
     blogsList.style.display = 'none';
 });
 
@@ -105,19 +111,15 @@ homeButton.addEventListener('click', function (event) {
     blogsList.style.display = 'none';
     learnVowels.style.display = 'none';
     learnSyllables.style.display = 'none';
+    learnConjugated.style.display = 'none';
     vowelSection.style.display = 'none';
     syllableSection.style.display = 'none';
     vowelList.style.display = 'none';
     syllableList.style.display = 'none';
+    lessons.style.display = 'none';
 });
 
 blogsButton.addEventListener('click', function (event) {
-    // while (syllableList.firstChild) {
-    //     syllableList.removeChild(syllableList.firstChild)
-    // };
-    // while (vowelList.firstChild) {
-    //     vowelList.removeChild(vowelList.firstChild);
-    // };
     languageDescription.style.display = 'none';
     blogsList.style.display = 'block';
     startPlaying.style.display = "none";
@@ -127,15 +129,10 @@ blogsButton.addEventListener('click', function (event) {
     syllableSection.style.display = 'none';
     vowelList.style.display = 'none';
     syllableList.style.display = 'none';
+    lessons.style.display = 'none';
 })
 
 languageButton.addEventListener('click', function (event) {
-    // while (syllableList.firstChild) {
-    //     syllableList.removeChild(syllableList.firstChild)
-    // };
-    // while (vowelList.firstChild) {
-    //     vowelList.removeChild(vowelList.firstChild);
-    // };
     languageDescription.style.display = 'block';
     blogsList.style.display = 'none';
     startPlaying.style.display = "none";
@@ -145,7 +142,11 @@ languageButton.addEventListener('click', function (event) {
     syllableSection.style.display = 'none';
     vowelList.style.display = 'none';
     syllableList.style.display = 'none';
+    lessons.style.display = 'none';
 });
+
+//Learning Starts below
+
 vowelButton.addEventListener('click', function (event) {
     while (syllableList.firstChild) {
         syllableList.removeChild(syllableList.firstChild)
@@ -154,6 +155,7 @@ vowelButton.addEventListener('click', function (event) {
     vowelSection.style.display = 'grid';
     learnSyllables.style.display = 'none';
     syllableSection.style.display = 'none';
+    learnConjugated.style.display = 'none';
     const newDiv = document.createElement('div');
     newDiv.classList.add('vowel-list');
     const varnaSpan = document.createElement('span');
@@ -183,6 +185,8 @@ syllableButton.addEventListener('click', function (event) {
     i = 0;
     syllableSection.style.display = "grid";
     vowelSection.style.display = 'none';
+    learnVowels.style.display = 'none';
+    learnConjugated.style.display = 'none';
     const newDiv = document.createElement('div');
     newDiv.classList.add('syllable-list')
     const varnaSpan = document.createElement('span');
@@ -202,5 +206,24 @@ syllableButton.addEventListener('click', function (event) {
         };
         learnVowels.style.display = 'block';
         learnSyllables.style.display = 'none';
+    }
+});
+
+conjugatedButton.addEventListener('click', function (event) {
+    conjugatedSyllableSection.style.display = 'grid';
+    syllableSection.style.display = "none";
+    vowelSection.style.display = 'none';
+    learnVowels.style.display = 'none';
+    learnSyllables.style.display = 'none';
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('conjugated-syllable-list')
+    newDiv.textContent = conjugatedSyllables[i][j];
+    conjugatedSyllableSection.appendChild(newDiv);
+    j++
+
+    if (j === 13) {
+        j = 0;
+        i++;
+        newDiv.textContent = conjugatedSyllables[i][j];
     }
 });
