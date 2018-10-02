@@ -42,7 +42,7 @@ const conjugatedSyllables = [
     ['व', 'वा', 'वि', 'वी', 'वु', 'वू', 'वे', 'वै', 'वो', 'वौ', 'वं', 'व:'],
     ['स', 'सा', 'सि', 'सी', 'सु', 'सू', 'से', 'सै', 'सो', 'सौ', 'सं', 'स:'],
 
-    ['ष', 'ष', 'षि', 'षी', 'षु', 'षू', 'षे', 'षै', 'षो', 'षौ', 'षं', 'ष:'],
+    ['ष', 'षा', 'षि', 'षी', 'षु', 'षू', 'षे', 'षै', 'षो', 'षौ', 'षं', 'ष:'],
     ['श', 'शा', 'शि', 'शी', 'शु', 'शू', 'शे', 'शै', 'शो', 'शौ', 'शं', 'श:'],
     ['ह', 'हा', 'हि', 'ही', 'हु', 'हू', 'हे', 'है', 'हो', 'हौ', 'हं', 'ह:'],
     ['क्ष', 'क्षा', 'क्षि', 'क्षी', 'क्षु', 'क्षू', 'क्षे', 'क्षै', 'क्षो', 'क्षौ', 'क्षं', 'क्ष:'],
@@ -222,8 +222,15 @@ conjugatedButton.addEventListener('click', function (event) {
     j++
 
     if (j === 13) {
+        while (conjugatedSyllableSection.firstChild) {
+            conjugatedSyllableSection.removeChild(conjugatedSyllableSection.firstChild);
+        };
         j = 0;
         i++;
         newDiv.textContent = conjugatedSyllables[i][j];
+    }
+    if (j === 12 && i === 35) {
+        syllableSection.style.display = 'grid';
+        vowelSection.style.display = 'grid';
     }
 });

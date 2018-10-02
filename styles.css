@@ -111,7 +111,7 @@ nav a:active{
 button{
     width: 180px;
     height: 60px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 5px auto;
     padding: 5px;
     background: rgb(6, 70, 70);
@@ -210,7 +210,7 @@ footer {
         font-size: 3.3vw;
     }
     p{
-        font-size: 2.8vw;
+        font-size: 2.9vw;
     }
     nav a{
         font-size: 2.7vw;
