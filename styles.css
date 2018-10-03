@@ -111,8 +111,11 @@ nav a:active{
     border: 2px solid rgb(16, 214, 165);
 }
 #learn-buttons{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 button{
     width: 170px;
@@ -190,6 +193,10 @@ footer {
 
 
 /* media query begins*/
+
+@media only screen and (max-width: 450px){
+
+}
 
 @media only screen and (min-width:420px) {
     body {
