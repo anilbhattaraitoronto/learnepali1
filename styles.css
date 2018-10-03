@@ -215,6 +215,7 @@ footer {
     }
     nav{
         padding: 0;
+        margin-bottom: 5px;
     }
     h2, h3 {
         padding: 2px 10px;
