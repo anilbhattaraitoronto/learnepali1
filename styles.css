@@ -50,15 +50,19 @@ nav a:active{
 #vowels, #conjugated-syllables {
     display: grid;
     grid-template-columns : repeat(4, minmax(30px, 1fr));
-    grid-gap: 8px;
-    border: 2px solid rgb(16, 214, 165);
+    grid-gap: 1px;
+    border: 1px solid rgb(214, 161, 16);
+    border-radius: 5px;
 }
 #conjugated-syllables div{
-    background: green;
+    background: rgb(53, 59, 21);
     padding: 10px;
     text-align: center;
-    color: yellow;
-    font-size: 1.3rem; 
+    color: rgb(218, 221, 236);
+    font-size: 1.6rem; 
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px gray;
+    text-shadow: 3px 3px 2px black;
 }
 #conjugated-syllables div:nth-child((13n+1)){
     background: white;
@@ -124,6 +128,7 @@ nav a:active{
     border-radius: 8px;
     color: rgb(3, 29, 3);
     margin: 5px 5px;
+    font-size: 1rem;
     text-align: center;
 }
 button{
@@ -205,7 +210,7 @@ footer {
 
 @media only screen and (max-width: 450px){
     footer{
-        display: none;
+        padding: 10px 0px;
     }
     #lesson-list{
         text-align: center;

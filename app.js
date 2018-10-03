@@ -220,21 +220,20 @@ conjugatedButton.addEventListener('click', function (event) {
     newDiv.classList.add('conjugated-syllable-list')
     newDiv.textContent = conjugatedSyllables[j][i];
     conjugatedSyllableSection.appendChild(newDiv);
-    i++
+    i++;
 
     if (i === 13) {
         while (conjugatedSyllableSection.firstChild) {
             conjugatedSyllableSection.removeChild(conjugatedSyllableSection.firstChild);
         };
+        ++j;
         i = 0;
-        j++;
+
         newDiv.textContent = conjugatedSyllables[i][j];
     }
     if (j === 36) {
         i = 0;
         j = 0;
-        // syllableSection.style.display = 'grid';
-        // vowelSection.style.display = 'grid';
         while (conjugatedSyllableSection.firstChild) {
             conjugatedSyllableSection.removeChild(conjugatedSyllableSection.firstChild);
         };
