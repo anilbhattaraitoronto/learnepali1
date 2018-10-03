@@ -204,8 +204,9 @@ syllableButton.addEventListener('click', function (event) {
         while (syllableList.firstChild) {
             syllableList.removeChild(syllableList.firstChild)
         };
-        learnVowels.style.display = 'block';
+        learnVowels.style.display = 'none';
         learnSyllables.style.display = 'none';
+        learnConjugated.style.display = 'block';
     }
 });
 
