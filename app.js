@@ -217,20 +217,28 @@ conjugatedButton.addEventListener('click', function (event) {
     learnSyllables.style.display = 'none';
     const newDiv = document.createElement('div');
     newDiv.classList.add('conjugated-syllable-list')
-    newDiv.textContent = conjugatedSyllables[i][j];
+    newDiv.textContent = conjugatedSyllables[j][i];
     conjugatedSyllableSection.appendChild(newDiv);
-    j++
+    i++
 
-    if (j === 13) {
+    if (i === 13) {
         while (conjugatedSyllableSection.firstChild) {
             conjugatedSyllableSection.removeChild(conjugatedSyllableSection.firstChild);
         };
-        j = 0;
-        i++;
+        i = 0;
+        j++;
         newDiv.textContent = conjugatedSyllables[i][j];
     }
-    if (j === 12 && i === 35) {
-        syllableSection.style.display = 'grid';
-        vowelSection.style.display = 'grid';
+    if (j === 36) {
+        i = 0;
+        j = 0;
+        // syllableSection.style.display = 'grid';
+        // vowelSection.style.display = 'grid';
+        while (conjugatedSyllableSection.firstChild) {
+            conjugatedSyllableSection.removeChild(conjugatedSyllableSection.firstChild);
+        };
+        learnConjugated.style.display = 'block';
+        learnVowels.style.display = 'block';
+        learnSyllables.style.display = 'block';
     }
 });
