@@ -49,6 +49,66 @@ nav a:active{
     background: rgb(136, 82, 82);
     color: black;
 }
+
+/* Begin styling the Lesson Description Section within Lesson Section  */
+
+#lessons .lesson-detail-tabs{
+    position: relative;
+    background: rgb(216, 213, 213);
+    display: block;
+    border: solid 1px #e0e0e0;
+    
+}
+#lessons .lesson-detail-tabs .tab-item{
+    display: block;
+}
+#lessons .lesson-detail-tabs .tab-description{
+    display: block;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease, padding 0.3s linear;
+}
+
+#lessons .lesson-detail-tabs .tab-description p{
+    padding: 10px;
+    margin: 0;
+}
+#lessons .lesson-detail-tabs .tab-description:target{
+    height: 140px;
+}
+#lessons .lesson-detail-tabs .tab-trigger{
+    text-decoration: none;
+}
+
+#lessons .lesson-detail-tabs .tab-title{
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 10px;
+    font-size: 4.2vw;
+    background: #038383;
+    color: white;
+    border: solid 1px #379AA4;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(255, 255, 255, 0.1) inset, 0 4px 0 #338A94, 0 4px 2px rgba(0,0,0,0.5)  ;
+}
+#lessons .lesson-detail-tabs .tab-title:hover{
+    background: #0bbfc0;
+}
+#lessons .lesson-detail-tabs .tab-title::after{
+    position: absolute;
+    content: "";
+    top: calc(50% - 5px);
+    right: 20px;
+    width: 7px;
+    height: 7px;
+    border-left: solid 1px white;
+    border-bottom: solid 1px white;
+    transform: rotate(-45deg);
+}
+
+/* End Styling Lesson Description Section Within Lesson Section */
+
 #vowels, #conjugated-syllables {
     display: grid;
     grid-template-columns : repeat(4, minmax(30px, 1fr));
@@ -113,23 +173,21 @@ nav a:active{
     grid-gap: 4px;
     border: 1px solid rgb(214, 161, 16);
 }
-#learn-buttons{
+/* #learn-buttons{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 30px;
     background: rgb(181, 226, 241);
-}
+} */
 #learn-vowels, #learn-syllables, #learn-conjugated{
     background:rgb(192, 240, 165);
-    padding: 10px;
-    box-shadow: 12px 12px 15px gray;
-    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 0 gray inset;
     color: rgb(3, 29, 3);
-    margin: 5px 5px;
-    font-size: 1rem;
-    text-align: center;
+    /* margin: 5px 5px; */
+    font-size: .8rem;
 }
 button{
     width: 170px;
@@ -190,7 +248,7 @@ h3{
     color: white;
     float: right;
 }
-caption{
+figcaption{
     background: gray;
     float: right;
 }
@@ -210,9 +268,9 @@ footer {
     footer{
         padding: 10px 0px;
     }
-    #lesson-list{
+    /* #lesson-list{
         text-align: center;
-    }
+    } */
     header h1{
         padding: 5px 10px;
     }
@@ -227,6 +285,9 @@ footer {
         font-size: 5vw;
     }
 
+}
+.tab-title{
+    font-size: 2.1vw;
 }
 @media only screen and (min-width:451px) {
     body {
@@ -257,11 +318,17 @@ footer {
     nav a{
         font-size: 2.7vw;
     }
+    .tab-title{
+        font-size: 1.8vw;
+    }
     
 }
 @media only screen and (min-width: 900px){
     p{
         font-size: 2.5vw;
+    }
+    .tab-title{
+        font-size: 2.1vw;
     }
 }
 /* media query ends*/
