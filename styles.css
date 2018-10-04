@@ -269,10 +269,9 @@ footer {
 footer a{
     text-decoration: none;
     Color: darkgreen;
-    font-size: 1rem;
 }
 footer p{
-    font-size: 1rem;
+    font-size: .8rem;
 }
 /* media query begins*/
 
