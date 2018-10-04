@@ -50,7 +50,7 @@ nav a:active{
     color: black;
 }
 
-/* Begin styling the Lesson Description Section within Lesson Section  */
+/* Begin styling the Lesson Description Section within Language Section  */
 
 #language .lesson-detail-tabs{
     position: relative;
@@ -66,7 +66,7 @@ nav a:active{
     display: block;
     padding: 0;
     height: 0;
-    overflow: hidden;
+    overflow: scroll;
     transition: height 0.5s ease, padding 0.1s ease;
 }
 
@@ -75,7 +75,7 @@ nav a:active{
     margin: 0;
 }
 #language .lesson-detail-tabs .tab-description:target{
-    height: 100%;
+    height: 50%;
 }
 #language .lesson-detail-tabs .tab-trigger{
     text-decoration: none;
@@ -107,7 +107,7 @@ nav a:active{
     transform: rotate(-45deg);
 }
 
-/* End Styling Lesson Description Section Within Lesson Section */
+/* End Styling Lesson Description Section Within Language Section */
 
 #vowels, #conjugated-syllables {
     display: grid;
@@ -227,7 +227,7 @@ h3{
 }
 #language #vowel-list div, #language #syllable-list div{
     background: rgb(1, 71, 1);
-    padding: 6px 3px;
+    padding: 3px 3px;
     
 }
 #language #vowel-list div span:nth-child(odd){
@@ -249,18 +249,30 @@ h3{
     float: right;
 }
 figcaption{
-    background: gray;
-    float: right;
+    font-style: italic;
+    float: left;
+    margin-left: 12%
 }
 img{
     display: block;
-    width: 95%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 10px auto;
 }
 
 footer {
     background: lightblue;
     padding: 10px;
+    color: darkgreen;
+    font-weight: bold;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    Color: darkgreen;
+    font-size: 1rem;
+}
+footer p{
+    font-size: 1rem;
 }
 /* media query begins*/
 
