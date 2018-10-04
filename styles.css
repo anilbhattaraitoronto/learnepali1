@@ -52,36 +52,36 @@ nav a:active{
 
 /* Begin styling the Lesson Description Section within Lesson Section  */
 
-#lessons .lesson-detail-tabs{
+#language .lesson-detail-tabs{
     position: relative;
     background: rgb(216, 213, 213);
     display: block;
     border: solid 1px #e0e0e0;
     
 }
-#lessons .lesson-detail-tabs .tab-item{
+#language .lesson-detail-tabs .tab-item{
     display: block;
 }
-#lessons .lesson-detail-tabs .tab-description{
+#language .lesson-detail-tabs .tab-description{
     display: block;
     padding: 0;
     height: 0;
     overflow: hidden;
-    transition: height 0.5s ease, padding 0.3s linear;
+    transition: height 0.5s ease, padding 0.1s ease;
 }
 
-#lessons .lesson-detail-tabs .tab-description p{
+#language .lesson-detail-tabs .tab-description p{
     padding: 10px;
     margin: 0;
 }
-#lessons .lesson-detail-tabs .tab-description:target{
-    height: 140px;
+#language .lesson-detail-tabs .tab-description:target{
+    height: 100%;
 }
-#lessons .lesson-detail-tabs .tab-trigger{
+#language .lesson-detail-tabs .tab-trigger{
     text-decoration: none;
 }
 
-#lessons .lesson-detail-tabs .tab-title{
+#language .lesson-detail-tabs .tab-title{
     position: relative;
     display: block;
     margin: 0;
@@ -92,10 +92,10 @@ nav a:active{
     border: solid 1px #379AA4;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(255, 255, 255, 0.1) inset, 0 4px 0 #338A94, 0 4px 2px rgba(0,0,0,0.5)  ;
 }
-#lessons .lesson-detail-tabs .tab-title:hover{
+#language .lesson-detail-tabs .tab-title:hover{
     background: #0bbfc0;
 }
-#lessons .lesson-detail-tabs .tab-title::after{
+#language .lesson-detail-tabs .tab-title::after{
     position: absolute;
     content: "";
     top: calc(50% - 5px);
