@@ -287,6 +287,9 @@ footer p{
         padding: 5px 10px;
     }
     nav{
+        background: lightblue;
+        position: sticky;
+        top: 0;
         padding: 0;
         margin-bottom: 5px;
     }
