@@ -30,7 +30,7 @@ header h1 {
 nav{
     background: lightblue;
     position: sticky;
-    top: 0;;
+    top: 0;
     margin-bottom: 20px;
     padding: 10px 0px;
 }
@@ -57,6 +57,7 @@ nav a:active{
     background: rgb(216, 213, 213);
     display: block;
     border: solid 1px #e0e0e0;
+    z-index: 0;
     
 }
 #language .lesson-detail-tabs .tab-item{
@@ -262,13 +263,13 @@ img{
 footer {
     background: lightblue;
     padding: 10px;
-    color: darkgreen;
+    color: rgb(75, 52, 4);
     font-weight: bold;
     text-align: center;
 }
 footer a{
     text-decoration: none;
-    Color: darkgreen;
+    Color: rgb(75, 46, 3);
 }
 footer p{
     font-size: .8rem;
