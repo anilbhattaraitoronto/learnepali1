@@ -21,6 +21,9 @@ p.intro::first-letter{
     font-size: 200%;
     color: rgb(15, 87, 87);
     font-weight: bold;
+    border: .5px solid darkgreen;
+    padding: 0px 3px; 
+    margin: 0px 5px;     
 }
 
 header h1 {
