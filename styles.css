@@ -12,6 +12,10 @@ body{
     box-shadow: 1px 1px 5px gray;
     padding: 0px 2px;
     border-radius: 2px;
+    /* animation-name: first-para;
+    animation-duration: 4s;
+    -webkit-animation-name: first-para;
+    -webkit-animation-duration: 14s;  */
 }
 p{
     padding: 10px 0px 3px 10px;
@@ -23,8 +27,16 @@ p.intro::first-letter{
     font-weight: bold;
     border: .5px solid darkgreen;
     padding: 0px 3px; 
-    margin: 0px 5px;     
+    margin: 0px 5px;    
 }
+/* @-webkit-keyframes first-para{
+    from {color: red;}
+    to{color: green;}
+}
+@keyframes first-para{
+    from {color: red;}
+    to{color: green;}
+} */
 
 header h1 {
     color: rgb(29, 92, 4);
