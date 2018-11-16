@@ -37,9 +37,15 @@ p.intro::first-letter{
     from {color: red;}
     to{color: green;}
 } */
-
+header{
+    background-image: url('img/header1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px auto;
+    
+}
 header h1 {
-    color: rgb(29, 92, 4);
+    color: white;
     padding: 30px 10px;
 }
 .header-image{
@@ -53,11 +59,10 @@ nav{
     position: sticky;
     top: 0;
     margin-bottom: 20px;
-    padding: 10px 0px;
+    padding: 16px 0;
 }
 nav a{
-    display: inline-block;
-    padding: 8px;
+    padding: 0 10px;
     text-decoration: none;
     color: rgb(66, 24, 5);
     font-weight: bold;
@@ -65,6 +70,7 @@ nav a{
 nav a:hover{
     background: white;
     color:darkgreen;
+    padding: 16px 10px;
 }
 nav a:active{
     background: rgb(136, 82, 82);
@@ -311,8 +317,6 @@ footer p{
         background: lightblue;
         position: sticky;
         top: 0;
-        padding: 0;
-        margin-bottom: 5px;
     }
     h2, h3 {
         padding: 2px 10px;
